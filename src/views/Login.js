@@ -1,6 +1,7 @@
 import router from "../routes/"
 const axios = require('axios').default;
 import $ from 'jquery'
+import system from "../../config/config.js";
 
 export default{
     data(){
@@ -15,14 +16,16 @@ export default{
 
     methods: {
         sendRequisicao: function(){
-            axios.get('http://127.0.0.1:8000/api/ping')
-            .then(resp => {
-                console.log('requisicao', resp);
-            })
+            console.log(system.baseUrl());
+            console.log(system.serverUrl());
         },
 
         goToHome: function(){
             router.push('/')
+        },
+        
+        goToRegister: function(){
+            router.push('/cadastro')
         },
 
         sendLogin: function(){

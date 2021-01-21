@@ -13,11 +13,10 @@
                             <div id="m-senha" class="messages"></div>
                         </div>
 
-                        <button id="btn-submit" type="submit" class="btn">Entrar</button>
+                        <button id="btn-submit"  class="btn-default" @click="sendRequisicao()" type="submit">Entrar</button>
 
-                        <div class="row justify-content-between">
-                            <div class="col-6"><a href="" width="100%">Esqueci a minha senha</a></div>
-                            <div class="col-6"><a href="">Criar uma conta grátis</a></div>
+                        <div class="mt-3">
+                            <button class="btn-default" id="btn-criar-conta" @click="goToRegister()">Criar conta</button>
                         </div>
                     </form>
                 </div>
@@ -48,11 +47,27 @@
         padding: 50px;
     }
 
-    #btn-submit{
+    .btn-default{
         width: 100%;
+        padding: 15px 0px;
+        border:none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.5s !important;
+    }
+
+    #btn-submit{
         background-color: #5B8EFB;
         color: white;
-        padding: 15px 0px;
+    }
+
+    #btn-criar-conta{
+        background-color: white;
+        color: #5B8EFB;
+    }
+
+    #btn-criar-conta:hover{
+        background-color: #5b8efb2a;
     }
 
     .messages{

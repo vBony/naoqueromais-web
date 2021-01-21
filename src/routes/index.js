@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 const Home = () => import('../views/Home.vue')
 const Login = () => import('../views/Login.vue')
+const Cadastro = () => import('../views/Cadastro.vue')
 
 Vue.use(Router)
 
@@ -18,6 +19,12 @@ const routes = [
         name: 'login',
         component: Login,
     },
+
+    {
+        path: '/cadastro',
+        name: 'cadastro',
+        component: Cadastro,
+    }
 ]
 
 const router = new Router({ routes })
